@@ -71,8 +71,8 @@
                             <td><?= $total ?></td>
 
                             <td>
-                                <a href="editar"> <i class="fa-solid fa-pen-to-square"></i> </a>
-                                <a href="eliminar"><i class="fa-solid fa-trash"></i></a>
+                                <a href="modificarMateriales.php?id=<?= $datos->id ?>"> <i class="fa-solid fa-pen-to-square"></i> </a>
+                                <a href="controlador/eliminar.php?id=<?= $datos->id ?>" class="btn btn-danger" onclick="return confirm('¿Seguro que quieres eliminar este material?')"><i class="fa-solid fa-trash"></i></a>
                             </td>
                         </tr>
                     <?php }
