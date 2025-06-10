@@ -29,6 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST["btnActualizar"])) {
         }
         return; 
     }
+    
     $query = "UPDATE materials SET 
                 name = '$nombre', 
                 unit = '$unidad', 

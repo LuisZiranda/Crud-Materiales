@@ -12,12 +12,14 @@
 
 
 <body>
-    <h1> Materiales. </h1>
-
-    <form method="GET" class="input-group mb-3 col-4">
-        <input type="text" class="form-control" name="buscar_nombre" placeholder="Buscar por nombre" aria-label="Buscar por nombre">
-        <button class="btn btn-outline-secondary" type="submit">Buscar</button>
+    <h1 class="text-center"> Lista de Materiales. </h1>
+<div class="d-flex justify-content-center">
+    <form method="GET" class="input-group input-group-sm mb-3 w-50">
+        <input type="text" class="form-control form-control-sm" name="buscar_nombre" placeholder="Buscar por nombre">
+        <button class="btn btn-outline-secondary btn-sm" type="submit">Buscar</button>
     </form>
+</div>
+</form>
 
     <div class="container-fluid row">
         <form class="col-4 p-3" method="POST">
@@ -54,7 +56,6 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
                         <th scope="col">Nombre</th>
                         <th scope="col">Unidad de Medida</th>
                         <th scope="col">Precio</th>
@@ -76,7 +77,6 @@
                         $total = $datos->price * $datos->stock;
                     ?>
                         <tr>
-                            <th scope="row"><?= $datos->id ?></th>
                             <td><?= $datos->name ?></td>
                             <td><?= $datos->unit ?></td>
                             <td><?= $datos->price ?></td>
@@ -84,7 +84,7 @@
                             <td><?= "$ $total" ?></td>
 
                             <td>
-                                <a href="modificarMateriales.php?id=<?= $datos->id ?>"> <i class="fa-solid fa-pen-to-square"></i> </a>
+                                <a href="modificarMateriales.php?id=<?= $datos->id ?>"  class="btn btn-warning"> <i class="fa-solid fa-pen-to-square"></i> </a>
                                 <a href="index.php?id=<?= $datos->id ?>" class="btn btn-danger" onclick="return confirm('¿Seguro que quieres eliminar este material?')"><i class="fa-solid fa-trash"></i></a>
                             </td>
                         </tr>

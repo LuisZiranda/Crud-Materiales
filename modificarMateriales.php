@@ -22,7 +22,8 @@ include "controlador/actualizaProducto.php";
 </head>
 
 <body>
-
+<h1 class="text-center"> Actualizar Materiales. </h1>
+<div class="row justify-content-center">
 <form class="col-4 p-3" method="POST">
     <?php 
     if ($datos = $sql->fetch_object()) { ?>
@@ -51,4 +52,5 @@ include "controlador/actualizaProducto.php";
         <div class="alert alert-danger">Material no encontrado.</div>
     <?php } ?>
 </form>
+</div>
 </body>

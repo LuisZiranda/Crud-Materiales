@@ -5,6 +5,7 @@ if (!empty($_GET["id"])) {
     $id = intval($_GET["id"]); 
 
     $resultado = $conexion->query("SELECT stock FROM materials WHERE id = $id");
+    
     if ($resultado && $resultado->num_rows > 0) {
         $fila = $resultado->fetch_object();
         if ($fila->stock == 0) {
