@@ -19,9 +19,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST["btnActualizar"])) {
     if (empty($_POST["precio"])) {  
         $errores[] = "El precio es obligatorio.";
     }
-    if (empty($_POST["stock"])) { 
-        $errores[] = "El stock es obligatorio.";
-    }
+    if (!isset($_POST["stock"]) || $_POST["stock"] === "") {
+    $errores[] = "El stock es obligatorio.";
+}
 
     if (!empty($errores)) {
         foreach ($errores as $error) {
